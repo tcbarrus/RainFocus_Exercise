@@ -34,7 +34,7 @@ html, body{
 	font-family: 'Libre Franklin', sans-serif;
 	color: @gray;
 
-	nav{
+	#nav-bar{
 		height: 100%;
 		width: 75px;
 		background: #E2395E; 
@@ -45,7 +45,49 @@ html, body{
 	    float: left;
 	    position: relative;
 
+	    @media only screen and (max-width : 875px) {
+	    	height: 75px;
+	    	width: 100%;
+
+	    	nav:hover{
+	    		display: block;
+	    	}
+	    }
+
+	    ul{
+	    	margin: 0;
+	    	padding: 0;
+	    }
+
 	    .section{
+	    	&#menu-icon{
+	    		display: none;
+
+			    @media only screen and (max-width : 875px) {
+			    	display: inline-block;
+			    	float: right;
+			    	height: 75px;
+			    	width: 100px;
+			    	line-height: 75px;
+			    	overflow: hidden;
+
+			    	i{
+			    		height: inherit;
+			    	}
+			    }
+	    	}
+
+
+	    	@media only screen and (max-width : 875px) {
+	    		&.nav-links{
+	    			display: none;
+	    		}
+	    	}
+
+	    	li{
+	    		list-style-type: none;
+	    	}
+
 	    	a{
 		    	display: block;
 		    	text-align: center;
@@ -76,8 +118,14 @@ html, body{
 		    	}
 		    }
 
-		    &:last-child{
+		    &#logo{
 	    		.bottom-anchor;
+
+	    		@media only screen and (max-width : 875px) {
+	    			float: left;
+	    			right: inherit;
+	    			width: 100px;
+	    		}
 	    	}
 
 	    	&:not(:first-child){
@@ -94,9 +142,21 @@ html, body{
 		float: left;
 		overflow-y: auto;
 
+
+	    @media only screen and (max-width : 875px) {
+	    	width: 100%;
+	    	overflow: inherit;
+	    }
+
 		.row{
 			overflow-x: hidden;
 			padding: 15px 0;
+
+			@media only screen and (max-width : 600px) {
+    			.col-1:not(:first-child), .col-2:not(:first-child){
+    				margin-top: 30px;
+    			}
+    		}
 
 			.col-3, .col-2, .col-1{
 				float: left;
@@ -109,10 +169,18 @@ html, body{
 
 			.col-2{
 				width: 66.66666666%;
+
+	    		@media only screen and (max-width : 600px) {
+	    			width: 100%;
+	    		}
 			}
 
 			.col-1{
 				width: 33.33333333%;
+
+				@media only screen and (max-width : 600px) {
+	    			width: 100%;
+	    		}
 			}
 
 			.info-box{
@@ -124,10 +192,23 @@ html, body{
 				border-radius: 3px;
 				border: 1px solid rgba(0, 0, 0, 0.14);
 				box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+				overflow-x: auto;
 
 				.info-box-header{
 					border-bottom: 2px solid @divider;
 					overflow: hidden;
+
+					@media only screen and (max-width : 600px) {
+		    			.col-1{
+		    				width: 33.33333333%;
+		    				margin-top: 0;
+		    			}
+
+		    			.col-2{
+		    				width: 66.66666666%;
+		    				margin-top: 0;
+		    			}
+		    		}
 
 					h2{
 						font-weight: normal;
@@ -202,6 +283,11 @@ html, body{
 
 					#badge-info-actions{
 						margin: 15px;
+
+
+	   					@media only screen and (max-width : 875px) {
+	   						position: static;
+	   					}
 					}
 
 					.row{
