@@ -3,6 +3,7 @@
 	<head>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link type="text/css" rel="stylesheet/less" href="../styles/style.less"/>
+		<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:200, 300, 500, 800" rel="stylesheet">
 		<script src="../scripts/less.js-2.7.1/dist/less.min.js" type="text/javascript"></script>
 	</head>
 	<body>
@@ -28,7 +29,130 @@
 			</div>
 		</nav>
 		<div id="page_content">
-
+			<div class="row">
+				<div class="col-1">
+					<div class="info-box">
+						<div class="info-box-header">
+							<div class="col-2">
+								<h2>Badge Output</h2>
+							</div>
+							<div class="col-1 right">
+								<a><i class="material-icons">mode_edit</i></a>
+							</div>
+						</div>
+						<div class="info-box-content">
+							<label>First Name: <span>Allison</span></label>
+							<label>Preferred First Name for Badge: <span>Al</span></label>
+							<label>Last Name: <span>Profitt</span></label>
+							<label>Company: <span>Bio-IT World</span></label>
+							<label>Onsite-Badge Holders: <span>JVA</span></label>
+							<label>Onsite-Aux: <span>1</span></label>
+							<label>Check-in: <span>09/16/16 7:51 AM</span></label>
+							<div class="right bottom-anchor" id="badge-info-actions">
+								<i class="material-icons">delete</i>
+								<i class="material-icons">local_printshop</i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="info-box">
+						<div class="info-box-header">
+							<div class="col-1">
+								<h2>Badge History</h2>
+							</div>
+							<div class="col-2 right">
+								<div>Indicates Active Badge <i class="material-icons success">account_box</i></div>
+							</div>
+						</div>
+						<div class="info-box-content">
+							<table>
+								<thead>
+									<tr>
+										<td>Badge ID</td>
+										<td>Print Location</td>
+										<td>Print Time</td>
+										<td>Bulk Check-in</td>
+										<td></td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>13411432268982420442z</td>
+										<td>Moscone 1</td>
+										<td>9/16/16 7:51 AM</td>
+										<td></td>
+										<td><i class="material-icons success">account_box</i></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<div class="info-box">
+						<div class="info-box-header">
+							<h2>Eligible Gifts</h2>
+						</div>
+						<div class="info-box-content">
+							<table id="gift-table">
+								<thead>
+									<tr>
+										<td>Gift Name</td>
+										<td>Pick-up Location</td>
+										<td>Pick-up Time</td>
+										<td>Claimed</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>JavaOne T-Shirt</td>
+										<td></td>
+										<td>09/14/16 3:24 PM</td>
+										<td><i class="material-icons success">done</i></td>
+									</tr>
+									<tr>
+										<td>Oracle Appreciation Event Wristband</td>
+										<td></td>
+										<td></td>
+										<td><i class="material-icons">done</i></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<div class="info-box">
+						<div class="info-box-header">
+							<h2>Monday</h2>
+							<div id="current-date">October 24, 2016</div>
+						</div>
+						<div class="info-box-content">
+							<div class="row">
+								<div class="time">09:00 AM</div>
+								<div class="event">KEY7963 SG - Oracle OpenWorld Monday Keynote<br><span>09:00 AM - 10:15 AM</span></div>
+								<div class="actions">
+									<i class="material-icons">mode_edit</i>
+									<i class="material-icons">delete</i>
+								</div>
+							</div>
+							<div class="row">
+								<div class="time">11:00 AM</div>
+								<div class="event">ESS7692 Fujitsu's "Cool" Technologies: AI, Cloud, and Platform Solutions<br><span>11:00 AM - 11:45 AM</span></div>
+								<div class="actions">
+									<i class="material-icons">mode_edit</i>
+									<i class="material-icons">delete</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

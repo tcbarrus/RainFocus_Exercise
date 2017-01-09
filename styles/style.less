@@ -1,7 +1,38 @@
+//Variables in scope
+@gray: #333333;
+@light-gray: #ABABAB;
+@green: #50bc59;
+@divider: #E5E5E5;
+@table-hover: #F6F6F6;
+
+//Utility Classes
+.success{
+	color: @green !important;
+}
+
+.right{
+	text-align: right;
+	color: @light-gray;
+
+	i{
+		cursor: pointer;
+	}
+}
+
+.bottom-anchor{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+//Page Styling
 html, body{
 	height: 100%;
 	background: #E9E9E9;
 	margin: 0px;
+	font-family: 'Libre Franklin', sans-serif;
+	color: @gray;
 
 	nav{
 		height: 100%;
@@ -46,10 +77,7 @@ html, body{
 		    }
 
 		    &:last-child{
-	    		position: absolute;
-	    		bottom: 0;
-	    		left: 0; 
-	    		right: 0;
+	    		.bottom-anchor;
 	    	}
 
 	    	&:not(:first-child){
@@ -64,5 +92,151 @@ html, body{
 		width: ~"calc(100% - 75px)"; 
 		height: 100%;
 		float: left;
+		overflow-y: auto;
+
+		.row{
+			overflow-x: hidden;
+			padding: 15px 0;
+
+			.col-3, .col-2, .col-1{
+				float: left;
+				position: relative;
+			}
+
+			.col-3{
+				width: 100%;
+			}
+
+			.col-2{
+				width: 66.66666666%;
+			}
+
+			.col-1{
+				width: 33.33333333%;
+			}
+
+			.info-box{
+				background: white;
+				width: ~"calc(100% - 30px)";
+				margin: 0 15px;
+				position: relative;
+				display: inline-block;
+				border-radius: 3px;
+				border: 1px solid rgba(0, 0, 0, 0.14);
+				box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+
+				.info-box-header{
+					border-bottom: 2px solid @divider;
+					overflow: hidden;
+
+					h2{
+						font-weight: normal;
+						margin: 15px;
+						font-size: 1.4em;
+						display: inline-block;
+					}
+
+					#current-date{
+						font-size: 0.75em;
+						color: @light-gray;
+						display: inline-block;
+					}
+
+					i{
+						margin: 17px 15px;
+					}
+
+					.right{
+						font-size: 0.75em;
+					}
+				}
+
+				.info-box-content{
+					margin: 15px;
+					font-size: 0.75em;
+
+					label{
+						display: block;
+						margin: 10px 0;
+						font-weight: 500;
+
+						span{
+							font-weight: normal;
+							color: @light-gray;
+						}
+					}
+
+					table{
+						width: 100%;
+						border-collapse: collapse;
+						margin-bottom: 35px;
+						overflow-x: auto;
+
+						&#gift-table{
+							table-layout: fixed;
+						}
+
+						tr{
+							border-bottom: 1px solid @divider;
+							margin: 0 -15px;
+							cursor: pointer;
+
+							td{
+								padding: 15px 0 ;
+								text-align: center;
+							}
+						}
+
+						thead{
+							font-weight: bold;
+						}
+
+						tbody{
+							color: @light-gray;
+
+							tr:hover{
+								background: @table-hover;
+							}
+						}
+					}
+
+					#badge-info-actions{
+						margin: 15px;
+					}
+
+					.row{
+						border-bottom: 1px solid @divider;
+					}
+
+					.time, .event, .actions{
+						display: inline-block;
+					}
+
+					.time, .event{
+						float: left;
+					}
+
+					.time{
+						padding: 0 10px;
+						border-right: 2px solid red;
+						font-weight: bolder;
+					}
+
+					.event{
+						padding: 0 10px;
+						span{
+							color: @light-gray;
+							font-weight: 200;
+							font-size: 0.8em;
+						}
+					}
+
+					.actions{
+						float: right;
+						.right;
+					}
+				}
+			}
+		}		
 	}
 }
