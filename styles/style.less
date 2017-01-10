@@ -49,9 +49,24 @@ html, body{
 	    	height: 75px;
 	    	width: 100%;
 
-	    	nav:hover{
-	    		display: block;
+	    	nav ul, nav:active ul{ 
+	    		position: absolute;
+	    		right: 0px;
+
+	    		.section.nav-links{
+	    			display: none;
+	    		}
 	    	}
+
+	    	nav:hover ul {
+	    		background: @gray;
+	    		z-index: 2;
+
+		    	.section.nav-links{
+		    		position: relative;
+		    		display: block;
+		    	}
+		    }
 	    }
 
 	    ul{
@@ -75,13 +90,6 @@ html, body{
 			    		height: inherit;
 			    	}
 			    }
-	    	}
-
-
-	    	@media only screen and (max-width : 875px) {
-	    		&.nav-links{
-	    			display: none;
-	    		}
 	    	}
 
 	    	li{
